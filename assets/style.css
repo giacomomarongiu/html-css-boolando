@@ -90,5 +90,40 @@ li {
     color: black;
     text-align: center;
     font-size: x-large;
+}
 
+.discount {
+    position: absolute;
+    bottom: 8%;
+    left: 0%;
+    z-index: 1;
+    width: auto;
+    height: auto;
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-size: x-small;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.green_sost {
+    position:absolute;
+    bottom: 8%;
+    left: 0%;
+    z-index: 1;
+    width: auto;
+    height: auto;
+    background-color: green;
+    color: white;
+    text-align: center;
+    font-size: x-small;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.green_space{
+    left: 14%
 }
