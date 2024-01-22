@@ -3,6 +3,10 @@ body {
     font-family: 'roboto';
 }
 
+main{
+    margin-top: 4%;
+}
+
 .centered {
     display: flex;
     margin: auto;
@@ -25,7 +29,9 @@ header {
 
 ul {
     display: flex;
+    margin:0;
     list-style: none;
+    padding: 0%;
 }
 
 li {
@@ -40,13 +46,14 @@ li {
 .main_container {
     max-width: 75%;
     justify-content: center;
+    padding-bottom: 8%;
 }
 
 .square {
     position: relative;
     width: 100%;
     height: 466px;
-    margin: 5px;
+    margin: 3px;
     max-width: 100%;
 }
 
@@ -126,4 +133,32 @@ li {
 
 .green_space{
     left: 14%
+}
+
+.square_text{
+    position: absolute;
+    top:100%;
+    z-index: 2;
+    text
+}
+
+.description{
+    margin: 0;
+}
+
+.brand{
+    margin: 0;
+    font-size: small;
+}
+
+.price{
+    margin: 0;
+    font-size: small;
+    color: red;
+    display: ;
+}
+.price_old{
+    font-weight: lighter;
+    color: black;
+    text-decoration: line-through;
 }
