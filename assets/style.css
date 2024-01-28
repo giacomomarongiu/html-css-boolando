@@ -1,3 +1,4 @@
+/*CSS reset*/
 * {
     margin: 0;
     padding: 0;
@@ -6,22 +7,15 @@
     font-size: small;
 }
 
-main {
-    
-}
-
-
 /*Utilities*/
 
 .container_75 {
     width: 75%;
     margin: auto;
 }
-
 .d-flex {
     display: flex;
 }
-
 .row {
     flex-wrap: wrap;
     padding-top: 5%;
@@ -29,21 +23,17 @@ main {
     margin-left: -1rem;
     margin-right: -1rem;
 }
-
 .col4 {
     width: calc((100%/12)*4);
-    padding: 1rem;
+    padding: 1rem; 
 }
-
 .small_text {
     font-size: x-small;
     font-weight:100;
 }
-
 .text_bold {
     font-weight: bold;
 }
-
 .green{
     background-color: green;
     padding: 2%;
@@ -59,44 +49,75 @@ main {
 
 
 
+/*header things*/
+header {
+    width: 100%;
+    height: auto;
+    background-color: orange;
+}
+.header_container {
+    max-width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: small;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+/*Fix left side of the navigation bar*/
+ul {
+    display: flex;
+    margin: 0;
+    list-style: none;
+    padding: 0%;
+}
+li {
+    padding-right: 10px;
+}
+/*fix logo*/
+.nav_logo {
+    max-height: 20px;
+    width: auto;
+}
+/*end of the header area*/
+
+
+
 /*Main area*/
 .main_container,
 .card,
-.card_up {
+.card_up,
+.main_image,
+.hover_image {
     max-width: 100%;
 }
 
 .card{
-    position:relative ;
+    position:relative ;/*need it for buttons*/
+
 }
 
 /*How to change image*/
 .hover_image {
     display: none;
 }
-
 .card:hover .main_image {
     display: none;
 }
-
 .card:hover .hover_image {
     display: block;
 }
+/*end how to change image*/
 
-.main_image,
-.hover_image {
-    max-width: 100%;
-    gap: 1%;
-}
-
+/*buttons colours*/
 p> :first-child{
     color: red;
 }
-
 p> :nth-child(2){
     text-decoration: line-through;
 }
 
+/*buttons position inside the card*/
 .heart, .btn_img{
     position: absolute;
 }
@@ -117,17 +138,12 @@ p> :nth-child(2){
     bottom:20%;
     max-width: 50%;
 }
-
-
-
-
 /*end of the main area*/
 
 
 /*footer area*/
 footer {
     width: 100%;
-    height: auto;
     background-color: black;
     color: white;
 }
@@ -135,53 +151,11 @@ footer {
 .footer_container {
     justify-content: space-between;
     align-items: center;
-    width: 75%;
     padding: 1%;
 }
-
 /*end of the footer area*/
 
 
 
 
 
-
-
-/*header things*/
-header {
-    width: 100%;
-    height: auto;
-    background-color: orange;
-
-}
-
-.header_container {
-    max-width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    font-size: small;
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
-
-
-/*Fix left side of the navigation bar*/
-ul {
-    display: flex;
-    margin: 0;
-    list-style: none;
-    padding: 0%;
-}
-
-li {
-    padding-right: 10px;
-}
-
-/*fix logo*/
-.nav_logo {
-    max-height: 20px;
-    width: auto;
-}
-
-/*end of the header area*/
