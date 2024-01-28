@@ -1,18 +1,150 @@
-body {
+* {
     margin: 0;
-    font-family: 'roboto';
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+    font-size: small;
 }
 
-main{
-    margin-top: 4%;
+main {
+    
 }
 
 
-/*use it to centre containers*/
-.centered {
-    display: flex;
+/*Utilities*/
+
+.container_75 {
+    width: 75%;
     margin: auto;
 }
+
+.d-flex {
+    display: flex;
+}
+
+.row {
+    flex-wrap: wrap;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
+.col4 {
+    width: calc((100%/12)*4);
+    padding: 1rem;
+}
+
+.small_text {
+    font-size: x-small;
+    font-weight:100;
+}
+
+.text_bold {
+    font-weight: bold;
+}
+
+.green{
+    background-color: green;
+    padding: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+.discount{
+    background-color: red;
+    padding: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+
+
+/*Main area*/
+.main_container,
+.card,
+.card_up {
+    max-width: 100%;
+}
+
+.card{
+    position:relative ;
+}
+
+/*How to change image*/
+.hover_image {
+    display: none;
+}
+
+.card:hover .main_image {
+    display: none;
+}
+
+.card:hover .hover_image {
+    display: block;
+}
+
+.main_image,
+.hover_image {
+    max-width: 100%;
+    gap: 1%;
+}
+
+p> :first-child{
+    color: red;
+}
+
+p> :nth-child(2){
+    text-decoration: line-through;
+}
+
+.heart, .btn_img{
+    position: absolute;
+}
+
+.heart{
+    top:1%;
+    right: 0;    
+    background-color: white;
+    padding: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.btn_img{
+    display: flex;
+    gap: 1%;
+    color:white;
+    bottom:20%;
+    max-width: 50%;
+}
+
+
+
+
+/*end of the main area*/
+
+
+/*footer area*/
+footer {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    color: white;
+}
+
+.footer_container {
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    padding: 1%;
+}
+
+/*end of the footer area*/
+
+
+
+
+
 
 
 /*header things*/
@@ -20,23 +152,24 @@ header {
     width: 100%;
     height: auto;
     background-color: orange;
+
 }
 
 .header_container {
-    max-width: 75%;
+    max-width: 100%;
     justify-content: space-between;
     align-items: center;
     color: white;
     font-size: small;
     padding-top: 1%;
-    padding-bottom: 1% ;
-
+    padding-bottom: 1%;
 }
+
 
 /*Fix left side of the navigation bar*/
 ul {
     display: flex;
-    margin:0;
+    margin: 0;
     list-style: none;
     padding: 0%;
 }
@@ -52,151 +185,3 @@ li {
 }
 
 /*end of the header area*/
-
-
-/*Main area*/
-.main_container {
-    max-width: 75%;
-    justify-content: center;
-    padding-bottom: 8%;
-}
-/*Penso ci sia un modo migliore per fare i quadrati ma non l'ho trovato*/
-.square {
-    position: relative;
-    width: 100%;
-    height: 466px;
-    margin: 3px;
-    max-width: 100%;
-}
-
-.square .hover_image {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    object-fit: contain;
-    opacity: 0;
-}
-
-.main_image {
-    position: absolute;
-    object-fit: contain;
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.hover_image{
-    width: 100%;
-}
-
-/*for switch image*/
-.square:hover .hover_image {
-    opacity: 1;
-}
-
-/*heart things*/
-.heart {
-    position: absolute;
-    top: 5px;
-    right: 0%;
-    z-index: 1;
-    width: auto;
-    height: auto;
-    padding: 3%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    background-color: white;
-    color: black;
-    text-align: center;
-    font-size: x-large;
-}
-
-
-/*red discount square*/
-.discount {
-    position: absolute;
-    bottom: 8%;
-    left: 0%;
-    z-index: 1;
-    width: auto;
-    height: auto;
-    background-color: red;
-    color: white;
-    text-align: center;
-    font-size: x-small;
-    padding: 3px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-/*green square*/
-.green_sost {
-    position:absolute;
-    bottom: 8%;
-    left: 0%;
-    z-index: 1;
-    width: auto;
-    height: auto;
-    background-color: green;
-    color: white;
-    text-align: center;
-    font-size: x-small;
-    padding: 3px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-/*space */
-.green_space{
-    left: 14%
-}
-
-.square_text{
-    position: absolute;
-    top:100%;
-    z-index: 2;
-    text
-}
-
-
-/*text under the image*/
-.description{
-    margin: 0;
-}
-
-.brand{
-    margin: 0;
-    font-size: small;
-}
-
-.price{
-    margin: 0;
-    font-size: small;
-    color: red;
-    display: ;
-}
-.price_old{
-    font-weight: lighter;
-    color: black;
-    text-decoration: line-through;
-}
-
-/*end of the main area*/
-
-
-/*footer area*/
-footer{
-    width: 100%;
-    height: auto;
-    background-color: black;
-    color: white;
-}
-
-.footer_container{
-    justify-content: space-between;
-    align-items: center;
-    width: 75%;
-    padding: 1%;
-}
-/*end of the footer area*/
